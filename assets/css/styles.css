@@ -1,0 +1,32 @@
+/* CSS Variables */
+:root {
+  --primary-color: #0F172A; /* Deep Navy Blue */
+  --secondary-soft-color: #C0C0C0; /* Soft Silver */
+  --secondary-light-color: #D4D4D4; /* Light Silver */
+  --highlight-color: #5E5E5E; /* Darker Silver on Hover */
+}
+
+/* Dark Luxury Color Theme */
+.bg-dark {
+  background-color: var(--primary-color) !important; /* Deep Navy Blue */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--secondary-soft-color); /* Soft Silver */
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: var(--secondary-light-color); /* Light Silver */
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color:  var(--highlight-color) ; /* Darker Silver on Hover */
+}
+
+/* Add slight shadow for depth */
+.shadow {
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); /* Soft glow effect */
+}
