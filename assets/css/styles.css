@@ -5,6 +5,18 @@
   --secondary-light-color: #D4D4D4; /* Light Silver */
   --highlight-color: #5E5E5E; /* Darker Silver on Hover */
 }
+
+/* Body and Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  margin: 2rem 0;
+}
+
 /* Make Navbar Sticky */
 .navbar {
   position: fixed;
@@ -39,14 +51,6 @@
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); /* Soft glow effect */
 }
 
-/* styling for the logo in the navbar */
-
-.logo-container {
-  background-color: #0F172A; /* Matches navbar */
-  padding: 10px; /* Adds spacing around logo */
-  display: inline-block; /* Keeps it aligned */
-}
-
 
 /* Hero Section Styling */
 header {
@@ -56,7 +60,7 @@ header {
 .hero {
   background-image: url('../images/hero.jpg'); /* Add luxury travel image */
   background-size: cover;
-  background-position: center;
+  background-position: 50% 65%;
   background-attachment: fixed;
   display: flex; 
   align-items: center;
@@ -114,3 +118,37 @@ p {
   border-color: #D4AF37;
   color: #121212;
 }
+
+
+/* Footer */
+.footer {
+  background-color: #0F172A; /* Matches navbar */
+  color: #C0C0C0; /* Soft silver for luxury appeal */
+  padding: 20px 0;
+}
+
+.copyright {
+  font-size: 1rem;
+}
+
+.social-icon {
+  color: #C0C0C0; /* Soft silver icons */
+  font-size: 1.5rem;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #E5E4E2; /* Slightly brighter hover effect */
+}
+
+/* Responsive Alignment */
+@media (max-width: 768px) {
+  .footer .row {
+    text-align: center;
+  }
+  .social-icon {
+    margin: 10px;
+  }
+}
+
