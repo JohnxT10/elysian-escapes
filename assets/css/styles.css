@@ -17,10 +17,12 @@ body {
   padding: 0;
 }
 
+/*This CSS rule adds padding to the left and right of the body and main elements. 
+This ensures that the content is not right up against the viewport on small screens.
+*/
 main {
-  margin: 2rem 0;
+    margin: 2rem 0;
 }
-
 /* Make Navbar Sticky */
 .navbar {
   position: fixed;
@@ -90,7 +92,7 @@ h1, h2, h3, h4, h5, h6  {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(15, 23, 42, 0.6); /* Dark navy blue overlay */
   margin-top: 66px;
 }
@@ -121,6 +123,12 @@ p {
   background-color: #D4AF37; /* Royal Gold */
   border-color: #D4AF37;
   color: #121212;
+}
+
+/* Testimonial Images */
+.testimonial-image {
+  width: 100px;
+  height: 100px;
 }
 
 
