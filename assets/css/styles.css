@@ -16,12 +16,18 @@ body {
   margin: 0;
   padding: 0;
 }
-
 /*This CSS rule adds padding to the left and right of the body and main elements. 
 This ensures that the content is not right up against the viewport on small screens.
 */
+
+
 main {
     margin: 2rem 0;
+}
+
+/* So you can see the headiings when you click on the links in the navbar */
+section {
+  padding: 4.5rem 0;
 }
 /* Make Navbar Sticky */
 .navbar {
@@ -82,8 +88,7 @@ h1, h2, h3, h4, h5, h6  {
   text-transform: uppercase; /* Adds a premium, refined touch */
 }
 
-
- 
+/* Hero Section Text */
 
 /* Overlay Effect */
 .hero::before {
@@ -125,6 +130,21 @@ p {
   color: #121212;
 }
 
+/* Cards */
+.card {
+  border: none;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 8px 32px 0 rgba(192,192,192,0.2), 0 4px 16px 0 rgba(0,0,0,0.12);
+}
+
 /* Testimonial Images */
 .testimonial-image {
   width: 100px;
@@ -132,10 +152,12 @@ p {
 }
 
 
+
+
 /* Footer */
 .footer {
-  background-color: #0F172A; /* Matches navbar */
-  color: #C0C0C0; /* Soft silver for luxury appeal */
+  background-color: var(--primary-color); /* Matches navbar */
+  color: var(--secondary-soft-color); /* Soft silver for luxury appeal */
   padding: 20px 0;
 }
 
@@ -144,7 +166,7 @@ p {
 }
 
 .social-icon {
-  color: #C0C0C0; /* Soft silver icons */
+  color: var(--secondary-soft-color); /* Soft silver icons */
   font-size: 1.5rem;
   margin-left: 15px;
   transition: color 0.3s ease;
@@ -154,6 +176,8 @@ p {
   color: #E5E4E2; /* Slightly brighter hover effect */
 }
 
+
+
 /* Responsive Alignment */
 @media (max-width: 768px) {
   .footer .row {
@@ -161,6 +185,5 @@ p {
   }
   .social-icon {
     margin: 10px;
-  }
+  }  
 }
-
