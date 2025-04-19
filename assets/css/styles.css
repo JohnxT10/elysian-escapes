@@ -82,7 +82,7 @@ header {
   padding: 100px 0;
 }
 
-h1, h2, h3, h4, h5, h6  {
+h2, h3, h4, h5, h6  {
   font-family: 'Raleway', sans-serif;
   font-weight: 600; /* Adjust for boldness */
   color: var(--secondary-soft-color); /* Soft silver to match luxury theme */
@@ -129,6 +129,19 @@ p {
   background-color: #D4AF37; /* Royal Gold */
   border-color: #D4AF37;
   color: #121212;
+}
+
+/* Welcome message */
+.contact-btn {
+  background-color: #FFD700;
+  color: #000;
+  border: 2px solid #FFD700;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+.contact-btn:hover, .contact-btn:focus {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
 /* Cards */
