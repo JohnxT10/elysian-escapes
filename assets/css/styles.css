@@ -30,6 +30,12 @@ main {
 section {
   padding: 4.5rem 0;
 }
+
+#spacing {
+  padding: 2rem 0;
+
+}
+
 /* Make Navbar Sticky */
 .navbar {
   position: fixed;
@@ -60,10 +66,6 @@ section {
   color:  var(--highlight-color) ; /* Darker Silver on Hover */
 }
 
-/* Add slight shadow for depth */
-.shadow {
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); /* Soft glow effect */
-}
 
 
 /* Hero Section Styling */
@@ -89,11 +91,19 @@ h1 {
   color: var(--secondary-soft-color);/* Soft silver */
 }
 
+
 h2, h3, h4, h5, h6  {
   font-weight: 600; /* Adjust for boldness */
   color: var(--secondary-soft-color); /* Soft silver to match luxury theme */
   text-transform: uppercase; /* Adds a premium, refined touch */
 }
+
+
+/* Override Bootstrap's .h3 color for headings */
+section .h3 {
+  color: var(--secondary-soft-color); /* Soft silver */
+}  
+
 
 /* Hero heading text */
 .brand-bold {
@@ -139,9 +149,9 @@ p {
 
 /* Welcome message */
 .contact-btn {
-  background-color: #FFD700;
+  background-color: #D4AF37; /* Royal Gold */
   color: #000;
-  border: 2px solid #FFD700;
+  border: 2px solid #D4AF37; /* Royal Gold */
   transition: background 0.3s, color 0.3s, border 0.3s;
 }
 .contact-btn:hover, .contact-btn:focus {
@@ -172,29 +182,24 @@ p {
   height: 100px;
 }
 
+/* About us page */
 
-/* Footer */
-.footer {
-  background-color: var(--primary-color); /* Matches navbar */
-  color: var(--secondary-soft-color); /* Soft silver for luxury appeal */
-  padding: 20px 0;
+.about-card {
+  border: 1.5px solid var(--secondary-soft-color, #C0C0C0);
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08), 0 1.5px 8px 0 rgba(255,255,255,0.04);
+  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Copyright */
-.copyright {
-  font-size: 1rem;
+.team-card {
+  border-radius: 1rem;
+  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 120px;
+  object-fit: cover;
 }
 
-.social-icon {
-  color: var(--secondary-soft-color); /* Soft silver icons */
-  font-size: 1.5rem;
-  margin-left: 15px;
-  transition: color 0.3s ease;
-}
 
-.social-icon:hover {
-  color: #E5E4E2; /* Slightly brighter hover effect */
-}
 
 /* Contact page */
 
@@ -226,6 +231,28 @@ p {
   color: #121212;
 }
 
+/* Footer */
+.footer {
+  background-color: var(--primary-color); /* Matches navbar */
+  color: var(--secondary-soft-color); /* Soft silver for luxury appeal */
+  padding: 20px 0;
+}
+
+/* Copyright */
+.copyright {
+  font-size: 1rem;
+}
+
+.social-icon {
+  color: var(--secondary-soft-color); /* Soft silver icons */
+  font-size: 1.5rem;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #E5E4E2; /* Slightly brighter hover effect */
+}
 
 
 /* Responsive Alignment */
@@ -237,3 +264,4 @@ p {
     margin: 10px;
   }  
 }
+
