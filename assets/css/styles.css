@@ -12,8 +12,13 @@
 
 /* Body and Layout */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background-color: #1A1A1A;
   overflow-x: hidden;
@@ -62,6 +67,8 @@ section {
   font-size: 1rem;
   color: var(--secondary-soft-color);
   /* Soft Silver */
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -85,9 +92,15 @@ header {
   background-position: center;
   /* 50% 65%; */
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 70vh;
   /* Ensures full-screen */
   padding: 100px 0;
@@ -159,6 +172,8 @@ p {
 .btn-outline-light {
   border: 2px solid #E5E4E2;
   color: #E5E4E2;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -176,6 +191,8 @@ p {
   color: #000;
   border: 2px solid #D4AF37;
   /* Royal Gold */
+  -webkit-transition: background 0.3s, color 0.3s, border 0.3s;
+  -o-transition: background 0.3s, color 0.3s, border 0.3s;
   transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
@@ -193,13 +210,21 @@ p {
 
 .card-img-top {
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card:hover {
-  transform: translateY(-12px) scale(1.04);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transform: translateY(-12px) scale(1.04);
+      -ms-transform: translateY(-12px) scale(1.04);
+          transform: translateY(-12px) scale(1.04);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Testimonial Images */
@@ -214,15 +239,25 @@ p {
   border: 1.5px solid var(--secondary-soft-color, #C0C0C0);
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
+  -webkit-box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
+          box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
+  -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .team-card {
   border-radius: 1rem;
+  -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   height: 120px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 
@@ -278,6 +313,8 @@ p {
   /* Soft silver icons */
   font-size: 1.5rem;
   margin-left: 15px;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
