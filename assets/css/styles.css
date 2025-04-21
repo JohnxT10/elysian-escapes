@@ -169,8 +169,8 @@ p {
   color: #121212;
 }
 
-/* Welcome message */
-.contact-btn {
+/* Welcome message and return to home  */
+.page-btn {
   background-color: #D4AF37;
   /* Royal Gold */
   color: #000;
@@ -179,8 +179,8 @@ p {
   transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
-.contact-btn:hover,
-.contact-btn:focus {
+.page-btn:hover,
+.page-btn:focus {
   background: transparent;
   color: #fff;
   border: 2px solid #fff;
