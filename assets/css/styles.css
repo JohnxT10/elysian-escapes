@@ -306,14 +306,14 @@ p {
 
 
 @media (min-width: 768px) {
-  /* Padding to the what sets us apart apart paragraph so that it's at 
-   the same level as the other one for tablets and up*/
+  /* Padding to the what sets us apart apart paragraph on the homepage so
+     that it's at the same level as the other one for tablets and up*/
   #welcome-space {
     padding: 33px 10px 0 10px;
   }
 
   /* Just padding to the top of the section so that the contact us button
-     can be closer (overriding the section rule)  */
+     can be closer on the hompage (overriding the section rule)  */
   .welcome-space-top {
     padding: 4.5rem 0 0 0;
   }
