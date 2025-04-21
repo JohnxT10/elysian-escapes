@@ -299,7 +299,9 @@ p {
 
   /* Overriding the section rule, creating less space between the two 
      welcome messages on screens up to tablets */
-  .container .welcome-space-top {
+  .container .space-top,  
+/* The cards on the service page aren't spaced to far from the header section */
+  header .space-top {
     padding: 4.5rem 0 0 0;
   }
 }
@@ -314,7 +316,7 @@ p {
 
   /* Just padding to the top of the section so that the contact us button
      can be closer on the hompage (overriding the section rule)  */
-  .welcome-space-top {
+  .move-button-up {
     padding: 4.5rem 0 0 0;
   }
   
