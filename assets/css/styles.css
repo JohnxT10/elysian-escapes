@@ -86,7 +86,7 @@ header {
 }
 
 .hero {
-  background-image: url('../images/hero.jpg');
+  background-image: url('../images/hero.webp');
   /* Add luxury travel image */
   background-size: cover;
   background-position: center;
