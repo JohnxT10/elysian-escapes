@@ -90,7 +90,6 @@ header {
   /* Add luxury travel image */
   background-size: cover;
   background-position: center;
-  /* 50% 65%; */
   background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +101,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   height: 70vh;
-  /* Ensures full-screen */
+  /* Ensures 70% of the screen */
   padding: 100px 0;
 }
 
@@ -356,7 +355,4 @@ p {
   .move-button-up {
     padding: 4.5rem 0 0 0;
   }
-  
-
-
 }
