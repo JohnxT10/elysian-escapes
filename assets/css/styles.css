@@ -8,6 +8,8 @@
   /* Light Silver */
   --highlight-color: #5E5E5E;
   /* Darker Silver on Hover */
+ --accent-gold-color: #D4AF37;
+  /* Royal Gold for buttons */
 }
 
 /* Body and Layout */
@@ -177,18 +179,18 @@ p {
 }
 
 .btn-outline-light:hover {
-  background-color: #D4AF37;
+  background-color: var( --accent-gold-color);
   /* Royal Gold */
-  border-color: #D4AF37;
+  border-color: var( --accent-gold-color);
   color: #121212;
 }
 
 /* Welcome message and return to home  */
 .page-btn {
-  background-color: #D4AF37;
+  background-color: var( --accent-gold-color);
   /* Royal Gold */
   color: #000;
-  border: 2px solid #D4AF37;
+  border: 2px solid var( --accent-gold-color);
   /* Royal Gold */
   -webkit-transition: background 0.3s, color 0.3s, border 0.3s;
   -o-transition: background 0.3s, color 0.3s, border 0.3s;
@@ -287,9 +289,9 @@ p {
 }
 
 .custom-button-outline:hover {
-  background-color: #D4AF37;
+  background-color: var( --accent-gold-color);
   /* Royal Gold */
-  border-color: #D4AF37;
+  border-color: var( --accent-gold-color);
   color: #121212;
 }
 
