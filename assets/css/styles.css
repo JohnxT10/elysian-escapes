@@ -330,6 +330,7 @@ p {
 
   .hero {
     background-attachment: scroll;
+    background-position: center top;
   }
 
   .footer .row {
