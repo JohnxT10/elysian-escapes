@@ -327,6 +327,11 @@ p {
 
 /* Responsive Alignment */
 @media (max-width: 768px) {
+
+  .hero {
+    background-attachment: scroll;
+  }
+
   .footer .row {
     text-align: center;
   }
@@ -341,6 +346,7 @@ p {
 /* The cards on the service page aren't spaced to far from the header section */
   header .space-top {
     padding: 4.5rem 0 0 0;
+
   }
 }
 
