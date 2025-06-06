@@ -1,50 +1,46 @@
-/* CSS Variables */
+/* 1. ===== CSS VARIABLES ===== */
+/* Define color variables for consistent theming throughout the site */
 :root {
-  --primary-color: #0F172A;
   /* Deep Navy Blue */
-  --secondary-soft-color: #C0C0C0;
+  --primary-color: #0F172A; 
   /* Soft Silver */
-  --secondary-light-color: #D4D4D4;
+  --secondary-soft-color: #C0C0C0; 
   /* Light Silver */
-  --highlight-color: #5E5E5E;
+  --secondary-light-color: #D4D4D4; 
   /* Darker Silver on Hover */
- --accent-gold-color: #D4AF37;
+  --highlight-color: #5E5E5E; 
   /* Royal Gold for buttons */
+  --accent-gold-color: #D4AF37; 
 }
 
-/* Body and Layout */
+/* 2. ===== BODY & LAYOUT ===== */
+/* Set up the main layout, background, and font for the site */
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
   background-color: #1A1A1A;
-  overflow-x: hidden;
-  /* Hides horizontal scrolling */
+  /* Prevents horizontal scrolling */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
 
-/*This CSS rule adds padding to the left and right of the body and main elements. 
-This ensures that the content is not right up against the viewport on small screens.
-*/
-
-
+/* 3. ===== MAIN CONTENT SPACING ===== */
+/* Add vertical margin to the main content area */
 main {
   margin: 2rem 0;
 }
 
-/* So you can see the headiings when you click on the links in the navbar */
+/* 4. ===== SECTION SPACING ===== */
+/* So you can see the headings when you click on the links in the navbar */
 section {
   padding: 4.5rem 0;
 }
 
-/* Make Navbar Sticky */
+/* 5. ===== NAVBAR ===== */
+/* Style the navbar to be sticky, dark-themed, and responsive */
 .navbar {
   position: fixed;
   top: 0;
@@ -53,98 +49,50 @@ section {
   padding: 10px 0;
 }
 
-/* Dark Luxury Color Theme */
+/* Dark Navy Blue Luxury Color Theme */
 .bg-dark {
-  background-color: rgba(15, 23, 42, 0.9) !important;
-  /* Deep Navy Blue */
+  background-color: rgba(15, 23, 42, 0.9) !important; 
 }
 
 .navbar-brand {
   font-size: 1.5rem;
-  color: var(--secondary-soft-color);
   /* Soft Silver */
+  color: var(--secondary-soft-color); 
 }
 
 .nav-link {
   font-size: 1rem;
   color: var(--secondary-soft-color);
-  /* Soft Silver */
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-
 .nav-link:hover {
-  color: var(--highlight-color);
   /* Darker Silver on Hover */
+  color: var(--highlight-color); 
 }
 
-
-
-/* Hero Section Styling */
+/* 6. ===== HERO SECTION ===== */
+/* Style the hero section with a background image and center its content */
 header {
   margin-top: 66px;
 }
 
 .hero {
-  background-image: url('../images/hero.webp');
   /* Add luxury travel image */
+  background-image: url('../images/hero.webp'); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   height: 70vh;
-  /* Ensures 70% of the screen */
   padding: 100px 0;
-}
-
-h1 {
-  color: var(--secondary-soft-color);
-  /* Soft silver to match luxury theme */
-  font-size: 3rem;
-  color: var(--secondary-soft-color);
-  /* Soft silver */
-}
-
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 600;
-  /* Adjust for boldness */
-  color: var(--secondary-soft-color);
-  /* Soft silver to match luxury theme */
-  text-transform: uppercase;
-  /* Adds a premium, refined touch */
-}
-
-
-/* Override Bootstrap's .h3 color for headings */
-section .h3 {
-  color: var(--secondary-soft-color);
-  /* Soft silver */
-}
-
-
-/* Hero heading text */
-.brand-bold {
-  font-weight: 700;
-  color: var(--secondary-light-color);
-  /* Light silver */
+  position: relative;
 }
 
 /* Overlay Effect */
+/* Add a semi-transparent overlay to darken the hero image for better text contrast */
 .hero::before {
   content: "";
   position: absolute;
@@ -152,48 +100,83 @@ section .h3 {
   left: 0;
   width: 100%;
   height: 70vh;
-  background: rgba(0, 0, 0, 0.6);
   /* Black overlay */
+  background: rgba(0, 0, 0, 0.6); 
   margin-top: 66px;
+  z-index: 1;
 }
 
 /* Hero Text Styling */
-.container {
+/* Ensure hero text appears above the overlay */
+.hero .container {
   position: relative;
   z-index: 2;
 }
 
-
-p {
-  font-size: 1.2rem;
-  color: var(--secondary-light-color);
+/* Hero heading text */
+/* Make brand words bold and light-colored for emphasis */
+.brand-bold {
+  font-weight: 700;
   /* Light silver */
+  color: var(--secondary-light-color); 
 }
 
+/* 7. ===== HEADINGS ===== */
+/* Style all headings for a luxury, premium look */
+h1 {
+  /* Soft silver to match luxury theme */
+  color: var(--secondary-soft-color); 
+  font-size: 3rem;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Adjust for boldness */
+  font-weight: 600; 
+  /* Soft silver to match luxury theme */
+  color: var(--secondary-soft-color); 
+  /* Adds a premium, refined touch */
+  text-transform: uppercase; 
+}
+
+/* Override Bootstrap's .h3 color for headings */
+section .h3 {
+  /* Soft silver */
+  color: var(--secondary-soft-color); 
+}
+
+/* 8. ===== PARAGRAPHS ===== */
+/* Style paragraphs for readability and luxury feel */
+p {
+  font-size: 1.2rem;
+  /* Light silver */
+  color: var(--secondary-light-color); 
+}
+
+/* 9. ===== BUTTONS ===== */
+/* Style buttons for luxury look and interactive feedback */
 .btn-outline-light {
   border: 2px solid #E5E4E2;
   color: #E5E4E2;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
 .btn-outline-light:hover {
-  background-color: var( --accent-gold-color);
   /* Royal Gold */
-  border-color: var( --accent-gold-color);
+  background-color: var(--accent-gold-color); 
+  border-color: var(--accent-gold-color);
   color: #121212;
 }
 
-/* Welcome message and return to home  */
+/* Welcome message and return to home */
 .page-btn {
-  background-color: var( --accent-gold-color);
   /* Royal Gold */
+  background-color: var(--accent-gold-color); 
   color: #000;
-  border: 2px solid var( --accent-gold-color);
-  /* Royal Gold */
-  -webkit-transition: background 0.3s, color 0.3s, border 0.3s;
-  -o-transition: background 0.3s, color 0.3s, border 0.3s;
+  border: 2px solid var(--accent-gold-color); 
   transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
@@ -204,75 +187,58 @@ p {
   border: 2px solid #fff;
 }
 
-/* Cards */
+/* 10. ===== CARDS ===== */
+/* Style cards for destinations, services, etc. */
 .card {
   border: none;
 }
 
 .card-img-top {
   height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .card:hover {
-  -webkit-transform: translateY(-12px) scale(1.04);
-      -ms-transform: translateY(-12px) scale(1.04);
-          transform: translateY(-12px) scale(1.04);
-  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
-  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: -webkit-transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
   transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Testimonial Images */
+/* 11. ===== TESTIMONIAL IMAGES ===== */
+/* Style testimonial profile images as circles */
+
 .testimonial-image {
   width: 100px;
   height: 100px;
 }
 
-/* About us page */
-
+/* 12. ===== ABOUT US PAGE ===== */
+/* Style about/team cards for a premium look */
 .about-card {
   border: 1.5px solid var(--secondary-soft-color, #C0C0C0);
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.03);
-  -webkit-box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
-          box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
-  -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
   transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .team-card {
   border-radius: 1rem;
-  -webkit-transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  -o-transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   height: 120px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
-
-
-/* Contact page */
-
+/* 13. ===== CONTACT PAGE ===== */
+/* Style contact form headings and fields for clarity and luxury */
 #contact {
   font-size: 2rem;
   font-weight: 500;
   color: #000;
   display: block;
   margin-top: 0.5rem;
-  text-transform: none;
-  /* Removes uppercase, overriding heading values  */
+  /* Removes uppercase, overriding heading values */
+  text-transform: none; 
 }
 
 #reach-out {
@@ -289,45 +255,42 @@ p {
 }
 
 .custom-button-outline:hover {
-  background-color: var( --accent-gold-color);
   /* Royal Gold */
-  border-color: var( --accent-gold-color);
+  background-color: var(--accent-gold-color); 
+  border-color: var(--accent-gold-color);
   color: #121212;
 }
 
-/* Footer */
+/* 14. ===== FOOTER ===== */
+/* Style the footer to match the navbar and overall theme */
 .footer {
-  background-color: var(--primary-color);
   /* Matches navbar */
-  color: var(--secondary-soft-color);
+  background-color: var(--primary-color); 
   /* Soft silver for luxury appeal */
+  color: var(--secondary-soft-color); 
   padding: 20px 0;
 }
 
-/* Copyright */
 .copyright {
   font-size: 1rem;
 }
 
 .social-icon {
-  color: var(--secondary-soft-color);
   /* Soft silver icons */
+  color: var(--secondary-soft-color); 
   font-size: 1.5rem;
   margin-left: 15px;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #E5E4E2;
   /* Slightly brighter hover effect */
+  color: #E5E4E2; 
 }
 
-
-/* Responsive Alignment */
+/* 15. ===== RESPONSIVE DESIGN ===== */
+/* Adjust layout and spacing for mobile and tablet screens */
 @media (max-width: 768px) {
-
   .hero {
     background-attachment: scroll;
     background-position: center top;
@@ -344,23 +307,20 @@ p {
   /* Overriding the section rule, creating less space between the two 
      welcome messages on screens up to tablets */
   .container .space-top,  
-/* The cards on the service page aren't spaced to far from the header section */
+  /* The cards on the service page aren't spaced too far from the header section */
   header .space-top {
     padding: 4.5rem 0 0 0;
-
   }
 }
 
-
 @media (min-width: 768px) {
-  /* Padding to the what sets us apart apart paragraph on the homepage so
-     that it's at the same level as the other one for tablets and up*/
+    /* Align "What Sets Us Apart" paragraph with the other section on tablets and up */
   #welcome-space {
     padding: 33px 10px 0 10px;
   }
 
-  /* Just padding to the top of the section so that the contact us button
-     can be closer on the hompage (overriding the section rule)  */
+  /* Adjust padding to the top of the section so that the contact us button
+     can be closer on the homepage (overriding the section rule) */
   .move-button-up {
     padding: 4.5rem 0 0 0;
   }
