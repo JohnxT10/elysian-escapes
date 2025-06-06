@@ -203,6 +203,12 @@ p {
   transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* Disable card hover effect for the contact form card only */
+#contact-form .card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 /* 11. ===== TESTIMONIAL IMAGES ===== */
 /* Style testimonial profile images as circles */
 
