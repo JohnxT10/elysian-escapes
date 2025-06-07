@@ -105,6 +105,27 @@ header {
   z-index: 1;
 }
 
+/* Hero overlay for better text visibility */
+.hero-overlay {
+  /* Deep navy, semi-transparent */
+  background-color: var(--primary-color); 
+  opacity: 0.65;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: 2rem 2.5rem;
+  margin-top: 2rem;
+ /* Enhanced 3D box-shadow for depth */
+ box-shadow:
+ 0 8px 32px 0 rgba(0,0,0,0.25),
+ 0 1.5px 8px 0 rgba(255,255,255,0.04) inset,
+ /* White outer glow */
+ 0 0 0 2px rgba(255,255,255,0.18); 
+ /* White border for luxury */
+border: 1.5px solid rgba(255,255,255,0.18); 
+/* Optional: adds a frosted glass effect */
+backdrop-filter: blur(2px); 
+}
+
 /* Hero Text Styling */
 /* Ensure hero text appears above the overlay */
 .hero .container {
