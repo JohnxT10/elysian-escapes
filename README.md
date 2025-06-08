@@ -35,6 +35,8 @@ Elysian Escapes is a luxury travel website that allows users to explore bespoke 
   - [Contact](#contact)
   - [Diagnostics](#diagnostics)
 - [Updates](#updates)
+  - [General](#general)
+  - [README.md](#readmemd)
 
 ---
 
@@ -170,6 +172,8 @@ Best Practices: Input validation and secure form handling are implemented, maint
 - Removed hover effects from contact form
 - Removed capital letters from file names
 - Added a small overlay on the hero text to make it more visible on Home,
+- Ensured all interative elements have sufficient contrast for readability. 
+- Adjusted padding and margins in the welcome section
 
 ### **README.md**
 
@@ -178,6 +182,6 @@ Best Practices: Input validation and secure form handling are implemented, maint
 - Responsive design for different devices. [Wireframes](#wireframes)
 - 🚀 Deployment link already added. [Live Website](#live-website)
 - ✅ Created a seperate testing file inside screenshots
-- 
+
 
 [Back to Top](#table-of-contents)
