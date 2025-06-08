@@ -143,34 +143,10 @@
     <!-- ===== TESTIMONIALS SECTION ===== -->
     <section> 
       <h2 class="h3 text-center">Testimonials</h2>
-      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" role="region"
-          aria-label="Testimonials" tabindex="0">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="testimonial text-center">
-              <img src="assets/images/oliviasmith.png" alt="Profile Picture of Olivia Smith"
-                  class="rounded-circle mb-3 testimonial-image">
-              <p>"Our honeymoon was pure magic—seamless planning, breathtaking tropical scenery, and unparalleled luxury. From private beach dinners to personalized excursions, every moment felt like a dream. The team made sure everything was flawless, turning our getaway into an unforgettable, once-in-a-lifetime experience. We’ll cherish it forever!"</p>
-              <p>- Olivia Smith</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial text-center">
-              <img src="assets/images/jamesramos.png" alt="Profile Picture of James Ramos"
-                  class="rounded-circle mb-3 testimonial-image">
-              <p>"I needed a private jet for a last-minute business trip, and this site made it unbelievably easy. The booking process was seamless, and the team handled every detail with precision. Luxury, efficiency, and professionalism all in one—truly outstanding"</p>
-              <p>- James Ramos</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="testimonial text-center">
-              <img src="assets/images/sophiamendy.png" alt="Profile Picture of Sophia Mendy"
-                  class="rounded-circle mb-3 testimonial-image">
-              <p>"Renting a high-end car was effortless, and having a VIP chauffeur made the journey even more luxurious. The service was impeccable—from the sleek vehicle to the personalized experience, every detail was flawlessly handled. I’ll be booking again for my next trip!"</p>
-              <p>- Sophia Mendy</p>
-            </div>
-          </div>
-        </div>
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" role="region" aria-label="Testimonials" tabindex="0">
+    <div class="carousel-inner" id="testimonials-container">
+      <!-- Testimonials will be injected here by JS -->
+    </div>
         <div class="container">
           <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
           data-bs-slide="prev">
@@ -213,22 +189,7 @@
   <!-- Font awesome -->
   <script src="https://kit.fontawesome.com/ad6ab7b771.js" crossorigin="anonymous"></script>
   
-  <!-- ===== NAVBAR COLLAPSE ON IN-PAGE LINK ===== -->
-  <script>
-    document.querySelectorAll('.navbar-collapse .nav-link').forEach((link) => {
-      link.addEventListener('click', function (e) {
-        const href = link.getAttribute('href');
-        // Only handle in-page anchors (href starts with #)
-        if (href && href.startsWith('#')) {
-          const section = document.querySelector(href);
-          if (section) {
-            e.preventDefault();
-            section.scrollIntoView({ behavior: 'smooth' });
-            document.querySelector('.navbar-collapse').classList.remove('show');
-          }
-        }
-      });
-    });
-  </script>
+ <script src="assets/js/script.js"></script>
+
 </body>
 </html>

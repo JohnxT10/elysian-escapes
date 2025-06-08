@@ -269,10 +269,15 @@ p {
 /* 11. ===== TESTIMONIAL IMAGES ===== */
 /* Style testimonial profile images as circles */
 
-.testimonial-image {
-  width: 100px;
-  height: 100px;
+.testimonial p {
+  font-style: italic;
 }
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
 
 /* 12. ===== ABOUT US PAGE ===== */
 /* Style about/team cards for a premium look */

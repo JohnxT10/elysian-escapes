@@ -176,6 +176,7 @@ Best Practices: Input validation and secure form handling are implemented, maint
 - ✅ Adjusted padding and margins in the welcome section.
 - 🎊 Ensured different hover effects across the website (Home, About and Service page).
 - ✅ Verified carousel functionality on touch devices (using swipe provided by bootstrap). 
+- Added ratings with Javascript to make it look more realistic 
 
 ### **README.md**
 
