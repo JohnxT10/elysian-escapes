@@ -210,6 +210,7 @@ p {
 /* Style cards for destinations, services, etc. */
 .card {
   border: none;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.5, 0.8), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .card-img-top {
@@ -220,13 +221,49 @@ p {
 .card:hover {
   transform: translateY(-12px) scale(1.04);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1), 0 4px 16px 0 rgba(0, 0, 0, 0.12);
-  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Disable card hover effect for the contact form card only */
 #contact-form .card:hover {
   transform: none !important;
   box-shadow: none !important;
+}
+
+/* Luxury hover effect for services cards */
+.card.hover-shadow {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Invisible overlay effect */
+.card.hover-shadow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 60%, rgba(212,175,55,0.12) 100%);
+  /* Invisible */
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+/* Makes the overly appear */
+.card.hover-shadow:hover::after {
+  opacity: 1;
+}
+
+.card.hover-shadow:hover {
+  border: 2px solid var(--accent-gold-color, #D4AF37);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 4px 24px 0 rgba(212,175,55,0.10);
+  /* Slightly lighter black for depth */
+  background-color: #181818; 
+}
+
+/* Turns the title gold when hovered */
+.card.hover-shadow:hover .card-title {
+  color: var(--accent-gold-color, #D4AF37);
+  transition: color 0.3s;
 }
 
 /* 11. ===== TESTIMONIAL IMAGES ===== */
@@ -243,8 +280,22 @@ p {
   border: 1.5px solid var(--secondary-soft-color, #C0C0C0);
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 8px 0 rgba(255, 255, 255, 0.04);
-  transition: box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    border-color 0.8s cubic-bezier(.4,0.7,.6,1),
+    box-shadow 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.about-card:hover {
+  border-color: var(--accent-gold-color, #D4AF37);
+  box-shadow: 0 4px 24px 0 rgba(30,30,30,0.35);
+}
+
+.about-card .h3 {
+  transition: color 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.about-card:hover .h3 {
+  color: var(--accent-gold-color, #D4AF37);
 }
 
 .team-card {

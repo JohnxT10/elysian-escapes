@@ -1,6 +1,6 @@
 # Elysian Escapes
 
-<img src="assets/images/logo.jpeg" alt="Logo" width="200" height="200">
+<img src="assets/images/logo.jpeg" alt="Logo" width="200" height="200" style="border-radius: 50%;">>
 
 Elysian Escapes is a luxury travel website that allows users to explore bespoke itineraries, exclusive experiences, and premium travel services. The site offers an elegant, intuitive interface for discovering high-end travel options and contacting the company for personalized assistance.
 
@@ -167,13 +167,15 @@ Best Practices: Input validation and secure form handling are implemented, maint
 
 ### General 
 
-- Add detailed comments across all pages explaining each major block 
-- Moved comments above the code block and explainedwhat each section does in CSS
-- Removed hover effects from contact form
-- Removed capital letters from file names
-- Added a small overlay on the hero text to make it more visible on Home,
-- Ensured all interative elements have sufficient contrast for readability. 
-- Adjusted padding and margins in the welcome section
+- 📝 Add detailed comments across all pages explaining each major block 
+- 📝 Moved comments above the code block and explainedwhat each section does in CSS
+- ❌ Removed hover effects from contact form
+- ❌ Removed capital letters from file names
+- ✅ Added a small overlay on the hero text to make it more visible on Home, About and Contact us page 
+- 🔎 Ensured all interative elements have sufficient contrast for readability. 
+- ✅ Adjusted padding and margins in the welcome section.
+- 🎊 Ensured different hover effects across the website (Home, About and Service page).
+- ✅ Verified carousel functionality on touch devices (using swipe provided by bootstrap). 
 
 ### **README.md**
 
